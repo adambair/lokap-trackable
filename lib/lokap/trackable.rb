@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "trackable/version"
+paths = File.expand_path("trackable/*.rb", __dir__)
+Dir.glob(paths).sort.each { |path| require path }
 
 module Lokap
   module Trackable
-    class Error < StandardError; end
-    # Your code goes here...
+    def self.included(base)
+      base.extend(Base)
+    end
   end
 end
