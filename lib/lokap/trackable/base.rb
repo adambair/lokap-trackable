@@ -20,7 +20,7 @@ module Lokap
         table_name = trackable_table_name(options[:class_name])
 
         instance_eval do
-          has_many :activities, class_name: class_name, as: :reference
+          has_many :activities, class_name: class_name, as: :reference, dependent: :destroy
 
           define_method(:activity?) do |event|
             activities.where(event: event).first
