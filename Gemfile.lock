@@ -34,7 +34,7 @@ PLATFORMS
 DEPENDENCIES
   github-markup
   lokap-trackable!
-  lokap-verbs
+  lokap-verbs (~> 3.1.1)
   minitest (~> 5.0)
   rake (~> 13.0)
   redcarpet

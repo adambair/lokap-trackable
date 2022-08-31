@@ -10,5 +10,5 @@ gem "yard"
 gem "redcarpet"
 gem "github-markup"
 
-gem 'lokap-verbs'
+gem 'lokap-verbs', '~> 3.1.1'
 
