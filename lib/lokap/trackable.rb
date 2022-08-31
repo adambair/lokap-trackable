@@ -6,7 +6,7 @@ Dir.glob(paths).sort.each { |path| require path }
 module Lokap
   module Trackable
     def self.included(base)
-      base.extend(Base)
+      base.extend(Lokap::Trackable::Base)
     end
   end
 end
